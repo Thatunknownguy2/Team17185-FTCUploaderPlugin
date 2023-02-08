@@ -1,0 +1,57 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>org.team17185.FTCUploader</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>FTCUploader</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor>Team 17185</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Quickly upload files to OnBot java for FTC robotics.
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="FTC Uploader Notifications"
+                           displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <group
+            id="org.team17185.ftcuploader.actions.UploaderActions"
+            class="org.team17185.ftcuploader.groups.UploaderActions"
+            text="FTC Uploader"
+            popup="true"
+            icon="AllIcons.Webreferences.Server">
+
+            <add-to-group
+                group-id="CutCopyPasteGroup"
+                anchor="after"
+                relative-to-action="org.team17185.ftcuploader.actions.UploadAction"/>
+
+            <action
+                id="org.team17185.ftcuploader.actions.UploadAction"
+                class="org.team17185.ftcuploader.actions.UploadAction"
+                text="Upload"
+                icon="AllIcons.Actions.Upload"/>
+
+            <action
+                id="org.team17185.ftcuploader.actions.OnBotAction"
+                class="org.team17185.ftcuploader.actions.OnBotAction"
+                text="OnBot Java"
+                icon="AllIcons.Actions.InlayGlobe"/>
+        </group>
+    </actions>
+</idea-plugin>
