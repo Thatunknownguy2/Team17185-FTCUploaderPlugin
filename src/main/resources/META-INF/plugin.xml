@@ -26,6 +26,21 @@
     <extensions defaultExtensionNs="com.intellij">
         <notificationGroup id="FTC Uploader Notifications"
                            displayType="BALLOON"/>
+
+        <toolWindow
+                id="FTC Uploader Output"
+                secondary="true"
+                icon="AllIcons.Actions.GroupBy"
+                anchor="bottom"
+                factoryClass="org.team17185.ftcuploader.utils.OutputWindowFactory"/>
+
+        <applicationService serviceImplementation="org.team17185.ftcuploader.settings.PluginSettingsState" />
+
+        <applicationConfigurable
+            parentId="tools"
+            instance="org.team17185.ftcuploader.settings.PluginSettingsConfigurable"
+            id="org.team17185.ftcuploader.settings.PluginSettingsConfigurable"
+            displayName="FTC Uploader Settings"/>
     </extensions>
 
     <actions>
@@ -42,16 +57,28 @@
                 relative-to-action="org.team17185.ftcuploader.actions.UploadAction"/>
 
             <action
+                id="org.team17185.ftcuploader.actions.OnBotAction"
+                class="org.team17185.ftcuploader.actions.OnBotAction"
+                text="OnBot Java"
+                icon="AllIcons.Actions.InlayGlobe"/>
+
+            <action
                 id="org.team17185.ftcuploader.actions.UploadAction"
                 class="org.team17185.ftcuploader.actions.UploadAction"
                 text="Upload"
                 icon="AllIcons.Actions.Upload"/>
 
             <action
-                id="org.team17185.ftcuploader.actions.OnBotAction"
-                class="org.team17185.ftcuploader.actions.OnBotAction"
-                text="OnBot Java"
-                icon="AllIcons.Actions.InlayGlobe"/>
+                id="org.team17185.ftcuploader.actions.BuildAction"
+                class="org.team17185.ftcuploader.actions.BuildAction"
+                text="Build"
+                icon="AllIcons.Actions.Compile"/>
+
+            <action
+                id="org.team17185.ftcuploader.actions.UploadBuildAction"
+                class="org.team17185.ftcuploader.actions.UploadBuildAction"
+                text="Upload and Build"
+                icon="AllIcons.Actions.Execute"/>
         </group>
     </actions>
 </idea-plugin>

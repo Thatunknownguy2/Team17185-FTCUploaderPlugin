@@ -4,7 +4,7 @@ import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
-import org.team17185.ftcuploader.Tasks.UploadTask;
+import org.team17185.ftcuploader.tasks.UploadTask;
 
 
 public class UploadAction extends AnAction {
