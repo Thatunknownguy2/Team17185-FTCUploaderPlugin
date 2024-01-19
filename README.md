@@ -9,16 +9,26 @@ I do not have a lot of experience in making IntelliJ plugins. Per MIT license, I
 
 ## How to Install
 1. Make sure you have the **latest** version of Android Studio or IntelliJ.
-2. Download the latest version of the plugin from the [Releases Page](https://github.com/Thatunknownguy2/Team17185-FTCUploaderPlugin/releases).
-3. In your IntelliJ or Android Studio, go to the Welcome screen and then click on Plugins.
-4. Click on the cog and then select `Install Plugin from Disk...`.
+
+
+**Android Studio Hedgehog+ or IntelliJ (Any Edition) 2023+ Should Work**
+
+![image](https://github.com/Thatunknownguy2/Team17185-FTCUploaderPlugin/assets/78375824/66d264f9-ae78-435d-93e1-b4957f14109c)
+![image](https://github.com/Thatunknownguy2/Team17185-FTCUploaderPlugin/assets/78375824/9e293656-edda-47ac-93e6-9787f1f19693)
+
+
+
+   
+3. Download the latest version of the plugin from the [Releases Page](https://github.com/Thatunknownguy2/Team17185-FTCUploaderPlugin/releases).
+4. In your IntelliJ or Android Studio, go to the Welcome screen and then click on Plugins.
+5. Click on the cog and then select `Install Plugin from Disk...`.
 
 ![image](https://user-images.githubusercontent.com/78375824/217407231-2c9da62a-3a55-4b84-b2d6-e82f227f1d0b.png)
 
 5. Locate the plugin and click `Ok`.
 
 ![image](https://user-images.githubusercontent.com/78375824/217407440-04661e2c-9b80-492e-adf7-5c47ebc1c1af.png)
-t
+
 6. Restart your IDE.
 
 ## How to Use
